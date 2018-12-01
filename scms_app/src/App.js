@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Sidemenu from './components/sidemenu/Sidemenu';
+
+import './asset/customStyle/style.css';
+import './asset/customStyle/fontz.css';
+import './asset/customStyle/bootstrapmanual.css';
+
 
 class App extends Component {
+
+  componentWillMount() {
+    document.title = 'School College Management System - Dashboard'
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>test</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <div className="wrapper">
+        <Sidemenu/> 
+     </div>
     );
   }
 }
